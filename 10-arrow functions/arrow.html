@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            // Type 1 Normal Function
+            function hello1(){
+                return "Hello";
+            }
+
+            console.log(hello1());
+
+            //Type 2 Variable functions
+            let hello2 = function (){
+                return "Hello";
+            }
+
+            console.log(hello2());
+            /**************************/
+            
+            //Type 3 Arrow functions
+            let hello = () => {
+                return "Hello";
+            }
+
+            console.log(hello());
+            //Simplified one line arrow functions
+            let sayHello = () => 'Hello';
+            console.log(sayHello());
+            
+            //Type 5 with parameters
+            let sayHelloWithName = (name) => 'Hello ' + name;
+            console.log(sayHelloWithName("World"));
+            /**************************/
+        </script>
+    </body>
+</html>

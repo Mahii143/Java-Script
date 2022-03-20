@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            var numbers1 =[10,25,32,48,49,52,65,73,78,87,91]; 
+            var numbers2 =[10,25,32,48,49,52,65,73,78,87,91,98]; 
+
+            var median1 = calculateMedian(numbers1);
+            var median2 = calculateMedian(numbers2);
+            console.log(median1);
+            console.log(median2);
+
+            function calculateMedian(numbers){
+                var lengthOfArray = numbers.length;
+                if(lengthOfArray % 2 == 0){
+                    return ((numbers[(lengthOfArray/2)-1]+numbers[lengthOfArray/2])/2);
+                }
+                else{
+                    return (numbers[(lengthOfArray-1)/ 2]);
+                }
+            }
+
+
+        </script>
+    </body>
+</html>

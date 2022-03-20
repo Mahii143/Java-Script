@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<body>
+    <h1>Airlines Infant Policy</h1>
+    <label for="age">Age</label>
+    <input type="text" id="age">
+    <input type="button" value="Find Catogary" id="findCatogary">
+    <h3 id="result"></h3>
+    <script>
+        let age = document.getElementById("age");
+        let findCatogary = document.getElementById("findCatogary");
+        let result = document.getElementById('result');
+        findCatogary.addEventListener("click",function(){
+            // console.log("click :)");
+            // result.innerHTML = '<h1>click</h1>';
+            if(age.value < 2){
+                result.innerText = "Infant";
+            }
+            else if(age.value >=2 && age.value <=11){
+                result.innerText = "Children";
+            }
+            else if(age.value >11){
+                result.innerText = "Adult";
+            }
+        })
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<body>
+    <script>
+        let employees = [
+            {id:3,name:"John"},
+            {id:2,name:"Muthu"},
+            {id:4,name:"Harish"},
+            {id:1,name:"Karthi"}
+        ]; 
+        let displayEmployees = (employees) => {
+            employees.forEach(item => console.log(item));
+        };
+        console.log("first");
+
+        displayEmployees(employees);
+
+        console.log("second");
+
+        employees.sort((a,b) => a.id - b.id);
+        displayEmployees(employees);
+
+        console.log("third");
+
+        employees.sort((a,b) => a.name > b.name ? 1 : -1);
+        displayEmployees(employees);
+
+
+
+    </script>    
+</body>
+</html>

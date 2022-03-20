@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 1rem;
+            padding: 0;
+        }
+        .container {
+            margin: 0.2rem 0rem 0rem 1rem
+        }
+        .item {
+            padding: 1rem;
+            border: 0.05rem solid #ddd;
+            width: 10rem;
+            display: none;
+            cursor: pointer
+        }
+        .item:hover {
+            background-color: #ddd
+        }
+        input {
+            padding: 1rem;
+            border: 0.05rem solid #ddd;
+            margin: 0.1rem 0rem 0rem 1rem;
+            outline: 0.05rem solid #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>XYZ School</h1>
+    <h2>Nominate Class Representative</h2>
+    <label for="search">Find Student</label><br>
+    <input type='text' id="search" placeholder="Partial name of the student...">
+    <div class="container">
+        <div class="item">Roland Scheffer</div>
+        <div class="item">Angel League</div>
+        <div class="item">Alayna Wilds</div>
+        <div class="item">Kathi Kawamoto</div>
+        <div class="item">Gertie Walquist</div>
+        <div class="item">Ashlyn Trejo</div>
+        <div class="item">Arlene Rasor</div>
+        <div class="item">Isaac Rideaux</div>
+        <div class="item">Temeka Laurence</div>
+        <div class="item">Kory Atchinson</div>
+        <div class="item">Mireya Campione</div>
+        <div class="item">Inez Ashmore</div>
+        <div class="item">Wan Presutti</div>
+        <div class="item">Junior Roll</div>
+        <div class="item">Selena Sandin</div>
+        <div class="item">Will Mckern</div>
+        <div class="item">Jessi Culwell</div>
+        <div class="item">Sierra Mcgrory</div>
+        <div class="item">Kellye Batres</div>
+    </div>
+
+    <script>
+        let search = document.getElementById("search");
+        let items = document.getElementsByClassName("item");
+        search.addEventListener("keyup",function()
+        {
+            
+            let itemClick = (event) => {
+                console.log(event.target.innerText)
+                search.value = event.target.innerText;
+                for(var i=0; i<items.length; i++)
+                {
+                    items[i].style.display = "none";
+                }
+            }
+            for(var i=0; i<items.length; i++)
+            {
+                items[i].addEventListener("click", itemClick);
+            }
+
+            for(var i=0; i<items.length; i++)
+            {
+                var name = items[i].innerText.toUpperCase();
+                if(name.includes(search.value.toUpperCase()) && search.value != "")
+                {
+                    items[i].style.display = "block";
+                }
+                else
+                {
+                    items[i].style.display = "none";
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

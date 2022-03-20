@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            //Benefit of BackSlash
+            console.log('"What?", asked Jim');
+            console.log("\"I'm fine\", said John");
+            console.log('"I\'m fine", said John');
+            
+            //Other benefits of backslash
+            console.log("\tTab");
+            console.log("\u00A5");
+            console.log("\u{1F60E}");
+
+            //String is an object we can use dot methods
+            console.log("Hello".length);
+            let hello = "Hello";
+            console.log(hello.length);
+            
+            //Read a specific character from a string
+            console.log("Hello"[0]);
+            console.log("Hello".charAt(1));
+
+            //String is immutable that means we cant change string
+            hello[0] = 'S';
+            console.log(hello);
+
+            //Convert to upper or lower case
+            console.log("Upper Case: " + hello.toUpperCase());
+            console.log("Lower Case: " + hello.toLowerCase());
+            console.log(hello);
+
+            //Find a string within another string
+            //                    01234
+
+            console.log("'el' in 'Hello': " + "Hello".indexOf('el'));
+            console.log("'z' in 'Hello': " + "Hello".indexOf('z'));
+            console.log("'ll' is in 'Hello': " + "Hello".includes('ll'));
+            console.log("'Hello' start with 'He': " + "Hello".startsWith('He'));
+            console.log("'Hello' end with 'lo': " + "Hello".endsWith('lo'));
+
+            //Extracting substrings from a string
+            //Using one parameter 
+            console.log("hello".substr(1));
+            console.log("hello".substring(1));
+            console.log("hello".slice(1));
+
+            //Using two parameters 
+            //substr(start,length)
+            console.log("substr(): " + "HelloWorld".substr(2,6));
+
+            //substring(start,end) and slice(start,end) functions
+            //they both give starting index to previous of end index characters
+            console.log("HelloWorld".substring(2,6));
+            console.log("HelloWorld".slice(2,6));
+            
+            //Reverse parameters
+            console.log("HelloWorld".substring(6,2)); //gives same o/p
+            console.log("HelloWorld".slice(6,2)); //gives empty spaces
+
+        </script>
+    </body>
+</html>

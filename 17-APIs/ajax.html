@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            let xhr = new XMLHttpRequest();
+            // console.log(xhr);
+
+            //readystate
+            console.log(xhr.readyState);
+            xhr.addEventListener('readystatechange',function()
+            {
+                //console.log(xhr.readyState);
+                if(xhr.readyState == 4)
+                {
+                    console.log(xhr.responseText);
+                }
+            });
+
+
+            //now to establish connection between the api
+            xhr.open('GET','https://restcountries.com/v3.1/name/united');//,false); //third parameter to decide whether the response should be asynchronous(true) or not(false), but dont use this parameter
+            xhr.send(); //check Dev-tools > Network > United > Response 
+            //console.log("Response: ", xhr.responseText); instead do like line no: 10
+        </script>
+    </body>
+</html>

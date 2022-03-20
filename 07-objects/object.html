@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            var male = { code: "M",name: "Male" };
+            var female = { code: "F",name: "Female" };
+            var passengers = [{
+                firstName: "Jhon",
+                lastName: "Smith",
+                gender: male,
+                dateOfBirth: "15-Sep-1985",
+                age: 35,
+                vegitarian: false
+            },
+            {
+                firstName: "Mary",
+                lastName: "Smith",
+                gender: female,
+                dateOfBirth: "27-Mar-1988",
+                age: 32,
+                vegitarian: true
+            },
+            {
+                firstName: "Joe",
+                lastName: "Smith",
+                gender: male,
+                dateOfBirth: "07-Apr-2014",
+                age: 6,
+                vegitarian: false
+            },
+            {
+                firstName: "Angela",
+                lastName: "Smith",
+                gender: female,
+                dateOfBirth: "15-Sep-2019",
+                age: 1,
+                vegitarian: false
+            }];
+            console.log(passengers);
+            console.log(passengers[0].firstName);
+            console.log(passengers[0].gender.name);
+            console.log(passengers[0].age);
+        </script>
+    </body>
+</html>

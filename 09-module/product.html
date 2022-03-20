@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <!-- <script src="category.js"></script>
+    <script src="vendor.js"></script>
+    <script src="product.js"></script> -->
+    <script type="module">
+        import {Category} from './category.js';
+        import {Vendor} from './vendor.js';
+        import {Product} from './product.js';
+
+
+        var book = new Category(1, 'BO', 'Books');
+        var electronic = new Category(2, 'EL', 'Electronics');
+        var apparel = new Category(3, 'AP', 'Apparels');
+        var household = new Category(4, 'HI', 'Household Items');
+
+        var company1 = new Vendor(1, 'Star Enterprise', 7834987234);
+        var company2 = new Vendor(2, 'Cloudtail Retail Ltd', 8798776766);
+
+        var potter = new Product(1,"Harry Potter and the Half-Blood prince",3.00,book,[company1,company2]);
+        var angels = new Product(2,"Angels and Demons",2.50,book,[company1]);
+        var tv = new Product(3,"Panasonic 4K Ultra HD",599.99,electronic,[company2]);
+        var mobile = new Product(4,"Samsung Galaxy",69.99,electronic,[company2]);
+        var shoes = new Product(5,"M-Rock Running Shoes",11.85,apparel,[company1,company2]);
+        var bags = new Product(6,"Kristo Leather Bags",5.25,apparel,[company1]);
+        var chairs = new Product(7,"KV Mesh Back Revolving Chair",22.75,household,[company2]);
+        var shelf = new Product(8,"Turntop Wooden Bookshelf",32.99,household,[company1,company2]);
+
+        var productList = [potter,angels,tv,mobile,shoes,bags,chairs,shelf];
+
+        for(var j=0; j<productList.length; j++){
+            productList[j].display();
+        }
+    </script>
+  </body>
+</html>

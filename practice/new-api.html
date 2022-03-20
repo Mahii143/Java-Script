@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            // var options = 
+            // {
+            //     method : "GET",
+            //     headers : { "Content-Type":"application/json" },
+            //     //body : {"name" : "mahir", "email" : "mahirmohd5", "password" : "abcd" }
+            // };
+            // fetch("http://127.0.0.1:5500/api", options);
+            
+            const obj1 = {
+                "name":"mahir",
+                "mail":"mahirmohd",
+                "pass":"1234",
+            };
+            function createPost(data){
+
+            //fetch(url, config)
+            //data = {title, body}
+
+            const config = {
+
+                method: "POST",
+
+                headers: {
+                    'Content-Type':'application/json'
+
+                },
+
+                body: JSON.stringify(data)
+
+            };
+
+            return fetch("submit.php",config)
+            .then(function(response){
+                return response.json()
+            });
+        };
+        createPost("mahir");
+        </script>
+    </body>
+</html>

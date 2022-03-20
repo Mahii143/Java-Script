@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<body>
+    <script>
+        let employees = [
+            {id:1,name:'John'},
+            {id:2,name:'Mary'},
+            {id:3,name:'Apelle'},
+            {id:4,name:'Moris'}
+        ];
+        findEmployee(employees);
+
+        function findEmployee(employees){
+            for(var i=0; i<employees.length; i++ ){
+                if(employees[i].name=='John') console.log(employees[i]);
+            }
+        }
+
+        console.log("* ==== Using find() function ==== *");
+        //forEach performs a loop to iterate the array of objects to get all its attribute
+        //without any index values
+        let employee = employees.find(employees => employees.name=='John');
+        console.log(employee);
+        let employee2 = employees.find(employees => employees.name=='Mango');
+        console.log(employee2);
+    </script>    
+</body>
+</html>

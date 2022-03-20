@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            box-sizing: border-box
+        }
+        html, body { 
+            margin : 0; 
+            height: 100% 
+        }
+        .nav { 
+            display: flex;
+            background-color: #252525
+        }
+        .nav-item:hover {
+            background-color: #6930c3;
+            cursor: pointer;
+        }
+        .nav-item {
+            padding: 1rem;
+            float: left;
+            height: 100%;
+            font-size: 1.2rem;
+            color: white;
+            margin: 0rem 0.5rem 0rem 0.5rem
+       }
+        .nav-item-selected {
+            background-color: #6930c3
+        }
+        .content {
+            display: none;
+            margin: 0;
+            background-color: #64dfdf;
+            border-top: 0.3rem solid #af0069;
+            height: 100%;
+            width: 100%;
+            padding: 1rem;
+            clear: left;
+        }
+        .content-block
+        {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav-item nav-item-selected">Home</div>
+        <div class="nav-item">Services</div>
+        <div class="nav-item">Pricing</div>
+        <div class="nav-item">About</div>
+    </nav>
+    <div class="content content-block">
+        <h1>Home</h1>
+        <p>Content for Home page.</p>
+    </div>
+    <div class="content">
+        <h1>Services</h1>
+        <p>Content for Services page.</p>
+    </div>
+    <div class="content">
+        <h1>Pricing</h1>
+        <p>Content for Pricing page.</p>
+    </div>
+    <div class="content">
+        <h1>About</h1>
+        <p>Content for About page.</p>
+    </div>
+
+    <script>
+        let nav = document.getElementsByClassName('nav-item');
+        let content = document.getElementsByClassName('content');
+        // for(var i=0; i<content.length; i++){
+        //     console.log(content[i].innerText);
+        // }   
+        for(var i=0; i<nav.length; i++)
+        {
+            nav[i].addEventListener('click',itemClick);
+        }
+        function itemClick(event)
+        {
+            //console.log(event.target.innerText);
+            for(var k=0; k<nav.length ; k++)
+            {
+                if(nav[k]==event.target)
+                {
+                    nav[k].classList.add("nav-item-selected");
+                }
+                else
+                {
+                    nav[k].classList.remove("nav-item-selected");
+                }
+            }
+            for(var j=0; j<content.length; j++)
+            {
+                let val = event.target.innerText.toUpperCase();
+                //console.log(val);
+                if(content[j].innerText.toUpperCase().includes(val))
+                {
+                    content[j].classList.add("content-block") ;
+                }
+                else
+                {
+                    content[j].classList.remove("content-block");
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>

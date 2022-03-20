@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<body>
+    <script>
+        let fruits = [ "Orange", "Apple", "Plum", "Grapes"];
+        console.log(fruits);
+        var fruitName = '';
+        for(let fruit of fruits){
+            fruitName += fruit+", " ;
+        }
+        //using for loop
+        console.log(fruitName);
+       
+        //using substring() function
+        console.log(fruitName.substring(0,fruitName.length - 2));
+
+        //using join function
+        console.log(fruits.join(', '));
+
+
+    </script>    
+</body>
+</html>

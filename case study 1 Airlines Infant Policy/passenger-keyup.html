@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        .message { font-size: 0.75rem; color: red; display: none; font-family: 'Times New Roman', Times, serif; padding: 0.75rem 0 0 0 ;}
+    </style>
+</head>
+<body>
+    <h1>Airlines Infant Policy</h1>
+    <label for="age">Age</label>
+    <input type="text" id="age">
+    <div id="message" class="message">Age should be number!</div>
+    <!-- <input type="button" value="Find Catogary" id="findCatogary"> -->
+    <h3 id="result"></h3>
+    <script>
+        // let findCatogary = document.getElementById("findCatogary");
+        let age = document.getElementById("age");
+        let result = document.getElementById('result');
+        let message = document.getElementById("message");
+        console.log(message);
+        age.addEventListener('keyup',function(){
+            // console.log("click :)");
+            // result.innerHTML = '<h1>click</h1>';
+            message.style.display = "none";
+            if(isNaN(age.value)){
+                message.style.display = "block";
+                return;
+            }
+            else{
+                if (age.value == ""){
+                    result.innerText = "";
+                    return;  //when no input to clear the h3 innerText value
+                }
+                if(age.value < 2){
+                    result.innerText = "Infant";
+                    result.style.color = "black";
+                }
+                else if(age.value >=2 && age.value <=11){
+                    result.innerText = "Children";
+                    result.style.color = "black";
+                }
+                else if(age.value >11 && age.value <=110){
+                    result.innerText = "Adult";
+                    result.style.color = "black";
+                }
+                else if (age.value < 0 || age.value > 110){
+                    result.innerText = "You are an alien if you have this age LOL...";
+                    result.style.color = "red";
+                }
+            }
+        })
+        
+    </script>
+</body>
+</html>

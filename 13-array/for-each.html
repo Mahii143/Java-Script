@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<body>
+    <script>
+        let employees = [
+            {id:1,name:'John'},
+            {id:2,name:'Mary'},
+            {id:3,name:'Apelle'},
+            {id:4,name:'Moris'}
+        ];
+        getEmployeeName(employees);
+
+        function getEmployeeName(employees){
+            for(var i=0; i<employees.length; i++ ){
+                console.log(employees[i].name);
+            }
+        }
+
+        console.log("* ==== Using forEach() function ==== *");
+        //forEach performs a loop to iterate the array of objects to get all its attribute
+        //without any index values
+        employees.forEach(employees => console.log(employees.name) );
+
+
+    </script>    
+</body>
+</html>

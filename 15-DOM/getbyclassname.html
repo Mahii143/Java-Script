@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        .heading { font-size: 4rem; }
+        .para { color: blue; }
+    </style>
+</head>
+<body>
+    <h1 class="heading para" id="heading">Heading</h1>
+    <p class="para" name="mahir">Para 1.</p>
+    <p class="para">Para 2.</p>
+    <p class="para">Para 3.</p>
+    <script>
+        //getElementsByClassName returns all the elements which has the class name as an array
+        let paras = document.getElementsByClassName("para");
+        for(let i=0; i<paras.length; i++){
+            console.log(paras[i].innerText);
+        }
+        //Same like getElementsByClassName but with class selector dot
+        let paras1 = document.querySelectorAll(".para");
+        for(let i=0; i<paras.length; i++){
+            console.log(paras1[i].innerText);
+        }
+        //id selector with hash
+        let newVar = document.querySelector("#heading");
+        console.log(newVar.innerText);
+        let var1 = document.getElementsByName("mahir");
+        console.log(var1);
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<body>
+    <script>
+        let employees = [
+            {id:1,name:'John'},
+            {id:2,name:'Mary'},
+            {id:3,name:'Apelle'},
+            {id:4,name:'Moris'}
+        ];
+
+        console.log("* ==== Using filter() function ==== *");
+        //forEach performs a loop to iterate the array of objects to get all its attribute
+        //without any index values
+        let employee = employees.filter(employee => employee.name =='John');
+        console.log(employee);
+        let employee2 = employees.filter(employees => employees.id > 1);
+        console.log(employee2);
+    </script>    
+</body>
+</html>

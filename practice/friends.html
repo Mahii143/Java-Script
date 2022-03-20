@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <!-- <script src="gender.js"></script>
+        <script src="namelist.js"></script> -->
+        <script src="studies.js"></script> 
+        <script type="module">
+            var male = new Gender('M','Male');
+            var female = new Gender('F','Female');
+
+            var friend1 = new Name("Nafees",18,male,"04-Sep-2002",def,'I st','Kdnl');
+            var friend2 = new Name("Imran",18,male,"10-Dec-2002",abc,'I st','Kdnl');
+            var friend3 = new Name("Ajees",18,male,"19-Oct-2002",xyz,'II nd','Kdnl');
+            var friend4 = new Name("Thoufiq",18,male,"22-Apr-2002",abc,'I st','Kdnl');
+            var friend5 = new Name("gnana",19,female,"10-Mar-2002",nec,'II nd','Kvp');
+            
+            var friends = [friend1,friend2,friend3,friend4,friend5];
+            for(var i = 0; i < friends.length; i++){
+                friends[i].Display();
+            }
+            import {Gender} from './gender.js';
+            import {Name} from './namelist.js';
+            /* import {Studies} from './studies.js';
+            import {Degree} from './studies.js'; */
+        </script>
+    </body>
+</html>

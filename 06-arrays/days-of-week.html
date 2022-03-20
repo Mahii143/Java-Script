@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            var week = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+            var serial = 1;
+            for(var day of week){
+                console.log((serial++)+") "+day);
+            }
+            var line = '';
+            for(var day of week){
+                line+=(' '+day+' | ');
+            }
+            console.log(line);
+        </script>
+    </body>
+</html>
